@@ -1,0 +1,8 @@
+catalog-api:
+    replicaCount: 2
+
+orders-api:
+    replicaCount: 2
+
+ui:
+    replicaCount: 2

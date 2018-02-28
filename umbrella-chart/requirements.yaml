@@ -1,0 +1,10 @@
+dependencies:
+  - name: catalog-api
+    version: ">=1.0.0"
+    repository: components
+  - name: orders-api
+    version: ">=1.0.0"
+    repository: components
+  - name: ui
+    version: ">=1.0.0"
+    repository: components

@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Umbrella chart for online-store microservices application
+name: umbrella-chart
+version: 1.0
