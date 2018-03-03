@@ -1,10 +1,10 @@
 dependencies:
   - name: catalog-api
     version: ">=1.0.0"
-    repository: components
+    repository: file://../charts/catalog-api
   - name: orders-api
     version: ">=1.0.0"
-    repository: components
+    repository: file://../charts/orders-api
   - name: ui
     version: ">=1.0.0"
-    repository: components
+    repository: file://../charts/ui
