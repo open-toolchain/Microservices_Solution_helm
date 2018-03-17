@@ -14,7 +14,7 @@ if [ -f $GRUNTFILE ]; then
   # idra --publishtestresult --filelocation=$FILE_LOCATION --type=$TEST_TYPE
 
   # publish results on all components
-  source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/publish_umbrella_test_results.sh.sh")
+  source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/publish_umbrella_test_results.sh")
 
   if [ $grunt_result -ne 0 ]; then
      exit $grunt_result
