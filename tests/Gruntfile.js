@@ -21,7 +21,15 @@ var gruntConfig = {
                     reporter: 'spec-xunit-file',
                 },
                 src: ['tests/sauce/test-cases.js']
+            },
+            selenium: {
+                options: {
+                    timeout: 60000,
+                    reporter: 'spec-xunit-file',
+                },
+                src: ['tests/selenium/test-cases.js']
             }
+
         },    
         jshint: {
             options: {
@@ -74,6 +82,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('test_real', ['env:chrome', 'simplemocha:sauce:' + _(desireds).keys().first()]);
+    grunt.registerTask('test_selenium', ['env:chrome', 'simplemocha:selenium:' + _(desireds).keys().first()]);
     grunt.registerTask('test_fake', ['env:chrome', 'simplemocha:sauce_node:' + _(desireds).keys().first()]);
 
     // _.forIn(desireds,function(desired, key) {
