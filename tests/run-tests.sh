@@ -4,9 +4,10 @@ if [ -f $GRUNTFILE ]; then
   export PATH=/opt/IBM/node-v4.2/bin:$PATH
   npm install
   npm install -g grunt-idra3
+  set +e
   grunt test_real --gruntfile $GRUNTFILE --base .
   grunt_result=$?
-
+  set -e
   FILE_LOCATION=./xunit.xml
   TEST_TYPE=fvt
 
