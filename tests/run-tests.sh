@@ -1,5 +1,5 @@
 #!/bin/bash
-GRUNTFILE="tests/Gruntfile.js"
+GRUNTFILE="./tests/Gruntfile.js"
 if [ -f $GRUNTFILE ]; then
   npm install
   npm install -g grunt-cli
