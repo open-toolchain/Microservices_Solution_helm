@@ -1,18 +1,15 @@
 #!/bin/bash
-GRUNTFILE="tests/Gruntfile.js"
+GRUNTFILE="./tests/Gruntfile.js"
 if [ -f $GRUNTFILE ]; then
-  export PATH=/opt/IBM/node-v4.2/bin:$PATH
   npm install
-  npm install -g grunt-idra3
+  npm install -g grunt-cli
+  
   set +e
   grunt test_real --gruntfile $GRUNTFILE --base .
   grunt_result=$?
   set -e
   FILE_LOCATION=./xunit.xml
   TEST_TYPE=fvt
-
-  # publish results on solution
-  # idra --publishtestresult --filelocation=$FILE_LOCATION --type=$TEST_TYPE
 
   # publish results on all components
   source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/publish_umbrella_test_results.sh")
