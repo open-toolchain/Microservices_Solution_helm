@@ -12,7 +12,7 @@ if [ -f $GRUNTFILE ]; then
   TEST_TYPE=fvt
 
   # publish results on all components
-  source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/hack/scripts/publish_umbrella_test_results.sh")
+  source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/publish_umbrella_test_results.sh")
 
   if [ $grunt_result -ne 0 ]; then
      exit $grunt_result
