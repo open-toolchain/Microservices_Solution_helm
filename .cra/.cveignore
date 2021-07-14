@@ -1,0 +1,7 @@
+[
+    {
+        "cve": "SNYK-JS-UNDERSCORESTRING-12168",
+        "expiration": "2021-08-31T22:08:41+04:00",
+        "comment": "Issue: underscore.string.  Fixed in Version: no fix yet .Waiting for upstream dependency "
+    }
+]
